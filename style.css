@@ -1,0 +1,220 @@
+:root {
+  --timeline-height: 50px;
+  --timeline-pointer-width: 3px;
+  --timeline-pointer-color: red;
+  --timeline-shoot-color: #88560a;
+  --footer-height: 30px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  background-color: #141414;
+  color: white;
+  font-size: 18px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: calc(100vh - var(--footer-height));
+}
+
+.content {
+  background-color: gray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+footer {
+  height: var(--footer-height);
+  background: gray;
+  background-color: black;
+  text-align: center;
+  font-size: .8rem;
+}
+
+/* Player */
+.player {
+  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, .2) 10%, transparent 75%);
+  display: flex;
+  align-items: center;
+}
+
+.player__container {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border: 3px solid black;
+  border-radius: 3px;
+}
+
+/* Movie Light */
+.player__container::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: var(--shadow-color);
+  bottom: -50px;
+  content: ".";
+  filter: blur(10px);
+  opacity: .2;
+  transition: background-color 1s;
+  transform: perspective(10px) rotateX(1deg) scaleX(1.05);
+  z-index: 10;
+}
+
+/* Timeline */
+.timeline {
+  padding-top: 3px;
+  width: 100%;
+  height: var(--timeline-height);
+  position: relative;
+  background-color: black;
+  z-index: 1000;
+}
+
+.timeline__content {
+  width: 100%;
+  height: var(--timeline-height);
+  display: flex;
+  position: relative;
+}
+
+.timeline__shoot {
+  cursor: pointer;
+  background-image: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, .1) 5%, transparent 50%);
+  background-color: var(--timeline-shoot-color);
+  font-size: 0.5rem;
+  color: white;
+  transition: filter .2s;
+  text-align: center;
+  line-height: 50px;
+  transition: transform .2s, box-shadow .2s, border-radius .2s;
+}
+
+.timeline__shoot--current {
+  transform: scale(1.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  z-index: 1010;
+}
+
+.timeline__shoot:nth-child(odd) {
+  z-index: 1000;
+  filter: brightness(1.2);
+}
+
+.timeline__shoot:hover {
+  filter: brightness(1.7);
+}
+
+.timeline__pointer {
+  z-index: 1020;
+  height: var(--timeline-height);
+  width: var(--timeline-pointer-width);
+  background-color: var(--timeline-pointer-color);
+  position: absolute;
+  left: 0;
+}
+
+/* Shoots */
+.shoot__list {
+  padding: 10px;
+  background-color: rgb(61, 43, 16);
+}
+
+.shoot__item {
+  background-color:black;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.shoot__item::before {
+  display: block;
+  content: attr(data-shootn);
+  position: absolute;
+  background-color: var(--timeline-shoot-color);
+  color: white;
+  text-align: center;
+  line-height: 1.8rem;
+  width: 30px;
+  height: 30px;
+  z-index: 1000;
+}
+
+.shoot__item:first-child {
+  padding-top: 10px;
+}
+
+.shoot__item:last-child {
+  padding-bottom: 10px;
+}
+
+.shoot__frame {
+  background-color: white;
+  height: 200px;
+  background-size: cover;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.shoot__frame:hover {
+  transform: scale(1.03);
+}
+
+.shoot__info {
+  text-align: center;
+  font-size: .6rem;
+  color:white;
+  padding: 3px;
+}
+
+.shoot__detail-list {
+  padding: 5px;
+  background-color: #151515;
+}
+
+.shoot__group-title {
+  background-color: rgba(255, 255, 255, .1);
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .7rem;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.shoot__detail-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  font-size: .7rem;
+  line-height: 1.5em;
+  padding: 0 0 5px;
+}
+
+.shoot__detail-item:last-child {
+  padding-bottom: 0;
+}
+
+.shoot__detail-label {
+  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.shoot__detail-value {
+  color: darkgray;
+}
