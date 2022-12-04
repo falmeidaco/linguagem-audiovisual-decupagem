@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <div id="video-content">
+      <div id="video-object">
+        <div id="player"></div>
+      </div>
+      <div id="video-timeline">
+      </div>
+    </div>
+    <div id="video-details">
+    </div>
+  </main>
+  <style>
+    #timeline {
+      --timeline-container-height: 100px;
+      --second-width: 10px;
+      --content-background-color: aquamarine;
+      --content-pointer-color: rgb(36, 217, 157);
+      --pointer-color: red;
+      --pointer-width: 3px;
+      --content-pointer-width: 3px;
+      border: 1px solid gray;
+      box-sizing: border-box;
+    }
+
+    .timeline__container {
+      overflow-y: hidden;
+      overflow-x: scroll;
+      position: relative;
+      height: var(--timeline-container-height);
+    }
+
+    .timeline__content {
+      width: calc(var(--video-lenght) * var(--second-width));
+      height: var(--timeline-container-height);
+      background-color: var(--content-background-color);
+      background-image: linear-gradient(to right, var(--content-pointer-color) 0 var(--content-pointer-width), rgba(255, 255, 255, 0) 0 var(--content-pointer-width));
+      background-size: var(--second-width) 1px;
+      position: relative;
+    }
+
+    .timeline__pointer {
+      width: var(--pointer-width);
+      height: var(--timeline-container-height);
+      position: absolute;
+      background-color: var(--pointer-color);
+      z-index: 1010;
+    }
+
+    .timeline_shoot {
+      background-color: blue;
+      width: var(--pointer-width);
+      height: var(--timeline-container-height);
+      position: absolute;
+      cursor: pointer;
+    }
+    .timeline_shoot:nth-child(odd) {
+      opacity: .5;
+    }
+    
+  </style>
+  <div id="timeline">
+    <div class="timeline__options">
+      <button class="marcar-plano">Marcar plano</button>
+    </div>
+    <div class="timeline__container">
+      <div class="timeline__pointer"></div>
+      <div class="timeline__content">
+      </div>
+    </div>
+  </div>
+  <script>
+    class Timeline {
+      player = null;
+      second_lenght = 10;
+      width = 300;
+      node = null;
+      elements = {
+        pointer: null,
+        content: null,
+        timelineContainer: null,
+        buttons: {},
+      };
+      data = {
+        shoots:[
+          {
+            position: 0,
+            color:'gray'
+          },
+          {
+            position: 6.923833417666482,
+            color:'gray'
+          },
+          {
+            position: 19.67675216667328,
+            color:'gray'
+          },
+          {
+            position: 25.06652258919361,
+            color:'gray'
+          },
+          {
+            position: 31.02271164200583,
+            color:'gray'
+          },
+          {
+            position: 45.8956612666638,
+            color:'gray'
+          },
+          {
+            position: 48.314119905250394,
+            color:'gray'
+          },
+          {
+            position: 57.44352339467595,
+            color:'gray'
+          },
+          {
+            position: 60.3082176623337,
+            color:'gray'
+          },
+        ]
+      }
+      constructor(node, player) {
+        this.node = node;
+        this.player = player;
+        this.setElements();
+        this.setEvents();
+        this.renderTimeline();
+      }
+      setElements() {
+        this.elements.pointer = this.node.querySelector('.timeline__pointer');
+        this.elements.content = this.node.querySelector('.timeline__content');
+        this.elements.timelineContainer = this.node.querySelector('.timeline__container');
+        this.elements.buttons['marcarPlano'] = this.node.querySelector('.timeline__options .marcar-plano');
+      }
+      setEvents() {
+        this.elements.buttons.marcarPlano.addEventListener('click', (event) => {
+          console.log(this.player.getCurrentTime());
+        }, false);
+      }
+      renderTimeline() {
+        for (let i = 0; i < this.data.shoots.length; i = i + 1) {
+          let shootElement = document.createElement('div');
+          shootElement.classList.add('timeline_shoot');
+          shootElement.setAttribute('data-position', this.data.shoots[i].position);
+          shootElement.style.left = `${this.data.shoots[i].position * this.second_lenght}px`;
+          if (i < this.data.shoots.length) {
+            shootElement.style.width = `${(this.data.shoots[i+1].position-this.data.shoots[i].position) * this.second_lenght}px`;
+          } else {
+            shootElement.style.width = `${this.player.getDuration() - data.shoots[i].position}px`;
+          }
+          shootElement.addEventListener('click', (event) => {
+            this.player.seekTo(parseFloat(event.target.dataset.position));
+          }, false);
+          this.elements.content.appendChild(shootElement);
+        }
+      }
+      setPointerPosition(position) {
+        console.log(this.elements.pointer);
+        this.elements.pointer.style.left = `calc(var(--second-width) * ${position})`;
+      }
+      setContentPosition(position) {
+        this.elements.content.style.left = `calc(var(--second-width) * -${position})`;
+      }
+      setTimelineLenght(lenght) {
+        this.elements.timelineContainer.style.setProperty('--video-lenght', lenght);
+      }
+    }
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var tm, player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: 'b0NL265B11w',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+      tm = new Timeline(document.getElementById('timeline'), player);
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      tm.setTimelineLenght(event.target.getDuration());
+      //event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var playing_interval;
+    function onPlayerStateChange(event) {
+      clearInterval(playing_interval);
+      if (event.data == YT.PlayerState.PLAYING) {
+      }
+      if (event.data == YT.PlayerState.PLAYING) {
+        playing_interval = setInterval(() => {
+          tm.setPointerPosition(player.getCurrentTime());
+          //tm.setContentPosition(player.getCurrentTime());
+        }, 100);
+      }
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
+</body>
+
+</html>
