@@ -1,5 +1,7 @@
 /* Id do vídeo do youtube */
-const DEC_YOUTUBE_VIDEO_ID = 'j9NG_NPLktA';
+const DEC_YOUTUBE_VIDEO_ID = 'b0NL265B11w';
+
+/* Dados da decupagem */
 const DEC_PLANOS = [
   {
     position: 0,
@@ -70,7 +72,7 @@ const DEC_PLANOS = [
   },
 ]
 
-/* Programa Variaveis */
+/*  Variáveis do programa */
 
 const player_element_id = 'player';
 const template_shoot_name = '%i';
@@ -94,6 +96,36 @@ class Decupagem {
     }
   }
 
+  static formatTime(time) {
+    if (time < 60) {
+      return '00:' + ((`${time}`.length > 1) ? time : `0${time}`);
+    } else {
+      let min =  Math.round(time/60);
+      let seg = time % 60;
+      return ((`${min}`.length > 1) ? min : `0${min}`) + ":" + ((`${seg}`.length > 1) ? seg : `0${seg}`);
+    }
+  }
+
+  static getShootStartPosition(index) {
+    return Decupagem.formatTime(DEC_PLANOS[index].position);
+  }
+
+  static getShootEndPosition(index) {
+    if ((index + 1) < DEC_PLANOS.length) {
+      return Decupagem.formatTime(DEC_PLANOS[index+1].position);
+    } else {
+      return Decupagem.formatTime(Math.round(Decupagem.player.getDuration()));
+    }
+  }
+
+  static getShootDuration(index) {
+    if ((index + 1) < DEC_PLANOS.length) {
+      return Decupagem.formatTime(DEC_PLANOS[index+1].position - DEC_PLANOS[index].position);
+    } else {
+      return Decupagem.formatTime(Math.round(Decupagem.player.getDuration()) - DEC_PLANOS[index].position);
+    }
+  }
+
   static createShootContent(data, index) {
     /* Shoot container */
     const shoot = document.createElement('div');
@@ -103,10 +135,15 @@ class Decupagem {
     const frame = document.createElement('div');
     frame.classList.add('shoot__frame');
     frame.style.backgroundImage = `url(images/${index + 1}.png)`;
+    frame.title = 'Executar plano';
+    frame.addEventListener('click', (event) => {
+      let shoot_n = parseInt(event.target.parentNode.dataset.shootn) - 1;
+      document.querySelectorAll('.timeline__shoot')[shoot_n].click();
+    });
     shoot.appendChild(frame);
     /* Shoot info */
     const info = document.createElement('div');
-    info.innerText = `Início: 00:00 | Intervalo: 00:00 - 00:12 | Duração: 12 s`;
+    info.innerText = `Início: ${Decupagem.getShootStartPosition(index)} | Intervalo: ${Decupagem.getShootStartPosition(index)} - ${Decupagem.getShootEndPosition(index)} | Duração: ${Decupagem.getShootDuration(index)}s`;
     info.classList.add('shoot__info');
     shoot.appendChild(info);
     /* Shoot detail list */
@@ -154,8 +191,9 @@ class Decupagem {
     const timeline = document.querySelector('.timeline__content');
     const shoot = document.createElement('div');
     shoot.classList.add('timeline__shoot');
+    shoot.style.backgroundImage = `url("images/${data.index+1}.png")`;
     shoot.innerText = template_shoot_name.replace('%i', (data.index + 1));
-    shoot.title = data.values.type;
+    shoot.title = `Executar Plano ${data.index + 1}`;
     let width;
     if (data.previous === null) {
       if (data.next === null) {
