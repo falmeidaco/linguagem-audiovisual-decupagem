@@ -1,6 +1,6 @@
 :root {
-  --content-player-width: 70vw;
-  --content-shoot-width: calc(100 - var(--content-player-width));
+  --content-player-width: 65vw;
+  --content-shoot-width: calc(100vw - var(--content-player-width));
   --timeline-height: 50px;
   --timeline-pointer-width: 3px;
   --timeline-pointer-color: red;
@@ -28,10 +28,10 @@ main {
   height: calc(100vh - var(--footer-height));
 }
 
-.content {
-  background-color: gray;
-  overflow-x: hidden;
+article,
+aside {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 footer {
@@ -42,92 +42,75 @@ footer {
   font-size: .8rem;
 }
 
-/* Player */
 .player {
-  background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, .2) 10%, transparent 75%);
-  display: flex;
-  align-items: center;
-}
-
-.player__container {
-  max-width: 640px;
-  margin: 0 auto;
-  position: relative;
   display: flex;
   flex-direction: column;
-  z-index: 1000;
-  border: 3px solid black;
-  border-radius: 3px;
 }
 
-/* Movie Light */
-.player__container::after {
-  position: absolute;
-  display: block;
+/* Player */
+#player {
   width: 100%;
-  height: 50px;
-  background-color: var(--shadow-color);
-  bottom: -50px;
-  content: ".";
-  filter: blur(20px);
-  opacity: .2;
-  transition: background-color 1s;
-  transform: perspective(10px) rotateX(1deg) scaleX(1.05);
-  z-index: 10;
+  height: calc(var(--content-player-width) * 0.565);
+  margin: 0;
+  padding: 0;
 }
 
 /* Timeline */
 .timeline {
-  padding-top: 3px;
   width: 100%;
-  height: var(--timeline-height);
+  height: calc(var(--timeline-height) + 6px);
   position: relative;
+  padding-top: 3px;
+  padding-bottom: 3px;
   background-color: black;
-  z-index: 1000;
 }
 
 .timeline__content {
   width: 100%;
-  height: var(--timeline-height);
+  height: calc(var(--timeline-height));
   display: flex;
   position: relative;
+  border-top: gray 3px dashed;
+  border-bottom: gray 3px dashed;
+  gap: 3px;
 }
 
 .timeline__shoot {
-  cursor: pointer;
-  background-image: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, .1) 5%, transparent 50%);
-  background-color: var(--timeline-shoot-color);
   font-size: 0.5rem;
   font-weight: bold;
   text-shadow: 1px 1px 0 black;
   color: white;
-  transition: filter .2s;
   text-align: center;
   line-height: 50px;
-  transition: all .2s;
+  cursor: pointer;
+  background-image: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, .1) 5%, transparent 50%);
+  background-color: var(--timeline-shoot-color);
   background-size: cover;
   background-blend-mode: soft-light;
+  
   opacity: .5;
-  border: 2px solid black;
-  box-sizing: border-box;
-}
-
-.timeline__shoot--current {
-  transform: scale(1.1);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  transition: all .2s;
+  margin-top: 3px;
+  margin-bottom: 3px;
   border-radius: 3px;
-  z-index: 1010;
-  opacity: 1;
-  font-size: 1rem;
-}
-
-.timeline__shoot:nth-child(odd) {
-  z-index: 1000;
-  filter: brightness(1.2);
 }
 
 .timeline__shoot:hover {
   filter: brightness(1.7);
+  opacity: 1;
+}
+
+.timeline__shoot:nth-child(odd) {
+  filter: brightness(1.2);
+}
+
+
+.timeline__shoot--current {
+  transform: scale(1.15);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), 0 0 3px rgba(0, 0, 0, 0.5);
+  z-index: 1010;
+  opacity: 1;
+  font-size: 1rem;
 }
 
 .timeline__pointer {
@@ -137,6 +120,7 @@ footer {
   background-color: var(--timeline-pointer-color);
   position: absolute;
   left: 0;
+  top: 6px;
 }
 
 /* Shoots */
@@ -146,7 +130,7 @@ footer {
 }
 
 .shoot__item {
-  background-color:black;
+  background-color: black;
   position: relative;
   margin-bottom: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -180,7 +164,7 @@ footer {
 .shoot__info {
   text-align: center;
   font-size: .6rem;
-  color:white;
+  color: white;
   padding: 3px;
 }
 

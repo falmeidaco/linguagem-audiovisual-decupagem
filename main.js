@@ -214,11 +214,6 @@ class Decupagem {
     }
     shoot.addEventListener('click', (event) => {
       Decupagem.updateCurrentShoot(data.values.position);
-      if (data.values.hasOwnProperty('color')) {
-        timeline.parentElement.parentElement.style.setProperty('--shadow-color',  data.values.color );
-      } else {
-        timeline.parentElement.parentElement.style.setProperty('--shadow-color', 'white');
-      }
       Decupagem.player.seekTo(data.values.position);
       Decupagem.player.playVideo();
     }, false);
@@ -226,11 +221,6 @@ class Decupagem {
   }
 
   static highlightCurrentShoot() {
-    if (DEC_PLANOS[Decupagem.current_shoot].hasOwnProperty('color')) {
-      document.querySelector('.player__container').style.setProperty('--shadow-color', DEC_PLANOS[Decupagem.current_shoot].color);
-    } else {
-      document.querySelector('.player__container').style.setProperty('--shadow-color', 'white');
-    }
     const shoot = document.querySelectorAll('.timeline__shoot').forEach((shoot, index) => {
       if (index == Decupagem.current_shoot) {
         shoot.classList.add('timeline__shoot--current');
