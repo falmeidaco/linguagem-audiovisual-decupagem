@@ -1,4 +1,6 @@
 :root {
+  --content-player-width: 70vw;
+  --content-shoot-width: calc(100 - var(--content-player-width));
   --timeline-height: 50px;
   --timeline-pointer-width: 3px;
   --timeline-pointer-color: red;
@@ -10,7 +12,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-
+  overflow-x: hidden;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: var(--content-player-width) var(--content-shoot-width);
   height: calc(100vh - var(--footer-height));
 }
 
