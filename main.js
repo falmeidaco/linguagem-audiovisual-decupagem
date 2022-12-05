@@ -1,81 +1,9 @@
-/* Id do vídeo do youtube */
-const DEC_YOUTUBE_VIDEO_ID = 'b0NL265B11w';
-
-/* Dados da decupagem */
-const DEC_PLANOS = [
-  {
-    position: 0,
-    name: 'Plano %i',
-    type: 'Over th showder',
-    metadata:[
-      ['Plano'],
-      ['Plano','Grande Plano Geral'],
-      ['Tipo de Plano','Plano de Lugar'],
-      ['Câmera'],
-      ['Câmera','Ângulo Baixo'],
-      ['Movimento','Zoom-in'],
-      ['Sons'],
-      ['Sons Diegéticos','Sons de trânsito (carros, motos)'],
-      ['Sons Não Diegéticos','Nenhum'],
-    ],
-  },
-  {
-    position: 6,
-    name: 'Plano %i',
-    type: 'Over the sholder',
-    metadata:[
-      ['Plano'],
-      ['Plano','Over the sholder'],
-      ['Tipo de Plano','Over the sholder'],
-      ['Câmera'],
-      ['Câmera','Eye-level'],
-      ['Movimento','-'],
-      ['Sons'],
-      ['Sons Diegéticos','Som da televisão, campainha {3.55}'],
-      ['Sons Não Diegéticos','Nenhum'],
-    ],
-  },
-  {
-    position: 19,
-    name: 'Plano %i',
-    type: 'Grande Plano Geral',
-  },
-  {
-    position: 25,
-    name: 'Plano %i',
-    type: 'Grande Plano Geral',
-  },
-  {
-    position: 31,
-    name: 'Plano %i',
-    type: 'Grande Plano Geral',
-  },
-  {
-    position: 46,
-    name: 'Plano %i',
-    type: 'Grande Plano Geral',
-  },
-  {
-    position: 48,
-    name: 'Plano %i',
-    type: 'Grande Plano Geral',
-  },
-  {
-    position: 57,
-    name: 'Plano %i',
-    type: 'Grande Plano Geral',
-  },
-  {
-    position: 60,
-    name: 'Plano %i',
-    type: 'Grande Plano Geral',
-  },
-]
 
 /*  Variáveis do programa */
-
 const player_element_id = 'player';
 const template_shoot_name = '%i';
+let DEC_YOUTUBE_VIDEO_ID = null;
+let DEC_PLANOS = [];
 let playing_interval;
 
 /* Programa */
@@ -104,6 +32,19 @@ class Decupagem {
       let seg = time % 60;
       return ((`${min}`.length > 1) ? min : `0${min}`) + ":" + ((`${seg}`.length > 1) ? seg : `0${seg}`);
     }
+  }
+
+  static parseTimeString(time) {
+    let s = 0, t = time.split(":");
+    if (t.length === 3) {
+      s += (parseInt(t[0]) * 60 * 60);
+      s += (parseInt(t[1]) * 60);
+      s += parseInt(t[2]);
+    } else {
+      s += (parseInt(t[0]) * 60);
+      s += parseInt(t[1]);
+    }
+    return s;
   }
 
   static getShootStartPosition(index) {
@@ -307,4 +248,82 @@ function onYouTubeIframeAPIReady() {
   Decupagem.PlayerIframeAPIReady();
 }
 
-Decupagem.iniciar();
+/* Ler arquivo com dados do video e decupagem */
+fetch('decupagem.txt')
+  .then((response) => response.text())
+  .then((text) => {
+    const li = text.split("\n");
+    let l, i, m, c = '', t = false;
+    for (i = 0; i < li.length; i = i +1) {
+      l = li[i];
+      if (l.trim() === "--- INFO" ) {
+        m = "info";
+        continue;
+      } else if (l.trim() === "--- PLANOS" ) {
+        m = "plano";
+        continue;
+      } else if (l.trim() === "--- VIDEO_ID" ) {
+        m = "video";
+        continue;
+      } else if (l.trim() === "--- INFO_HTML" ) {
+        m = "infohtml";
+        continue;
+      }
+      if (m === "plano") {
+        l = l.trim();
+        if (l === "") continue;
+        if (/\[{2,2}\d{2,2}\:\d{2,2}\:\d{2,2}\]{2,2}/.test(l)) {
+          DEC_PLANOS.push({
+            position: Decupagem.parseTimeString(l.match(/\d{2,2}\:\d{2,2}\:\d{2,2}/)[0]),
+            metadata:[],
+          })
+        } else {
+          if (/^#/.test(l)) {
+            DEC_PLANOS[DEC_PLANOS.length-1].metadata.push([l.replace('#', '')]);
+          } else {
+            DEC_PLANOS[DEC_PLANOS.length-1].metadata.push([ l.split("|")[0].trim(), l.split("|")[1].trim() ]);
+          }
+        }
+      } else if (m === "video") {
+        l = l.trim();
+        if (l !== "") {
+          DEC_YOUTUBE_VIDEO_ID = l.trim();  
+        }
+      } else if (m === "info") {
+        if (!t) {
+          l = l.trim();
+          if (l === "") continue;
+          document.querySelector('.content').appendChild(document.createElement('h1'));
+          document.querySelector('.content h1').innerText = l;
+          document.title = l;
+          document.querySelector('.content').appendChild(document.createElement('p'));
+          t = true;
+        } else {
+          document.querySelector('.content p').innerHTML = document.querySelector('.content p').innerHTML + l + "<br />\n";
+        }
+      } else if (m === "infohtml") {
+        if (!t) {
+          l = l.trim();
+          if (l === "") continue;
+          document.querySelector('.content').appendChild(document.createElement('h1'));
+          document.querySelector('.content h1').innerText = l;
+          document.title = l;
+          t = true;
+        } else {
+          c = c + l;
+        }
+      }
+    }
+    if (c !== "") {
+      document.querySelector('.content').innerHTML = document.querySelector('.content').innerHTML + c;
+    }
+    /* Verifica */
+    if (DEC_YOUTUBE_VIDEO_ID === null) {
+      window.alert('Video ID não definido');
+    } else if (DEC_PLANOS.length === 0) {
+      window.alert('Não há nenhum plano definido.');
+    } else {
+      /* Inicia */
+      Decupagem.iniciar();
+    }
+});
