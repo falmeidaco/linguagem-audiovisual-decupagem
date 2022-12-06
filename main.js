@@ -336,6 +336,10 @@ fetch('decupagem.txt')
       window.alert('Não há nenhum plano definido.');
     } else {
       /* Inicia */
+      if (CONFIG.hasOwnProperty('themeColor')) {
+        console.log(CONFIG.themeColor);
+        document.querySelector(':root').style.setProperty('--theme-color', CONFIG.themeColor);
+      }
       Decupagem.iniciar();
     }
 });

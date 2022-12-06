@@ -24,7 +24,7 @@ Decupagem de: O Espião que Sabia Demais (2012)
 
 [[00:00:00]]
 
-$color:red
+$color:gray
 $name: Plano 1
 $image_url: https://image_url.source/teste.oi.jpg
 
@@ -55,6 +55,9 @@ Sons diegéticos | Sons de trânsito (carros, motos)
 Sons não diegéticos | -
 
 [[00:00:19]]
+
+$color:gray
+
 #PLANO
 Plano | Grande Plano Geral
 Tipo de plano | Plano de lugar
@@ -152,6 +155,6 @@ Movimento | Zoom-in
 Sons diegéticos | Sons de trânsito (carros, motos)
 Sons não diegéticos | -
 
-
 --- CONFIG
-$theme-color: red;
+
+$themeColor: purple
