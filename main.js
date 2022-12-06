@@ -2,6 +2,7 @@
 /*  Variáveis do programa */
 const player_element_id = 'player';
 const template_shoot_name = '%i';
+let CONFIG = {};
 let DEC_YOUTUBE_VIDEO_ID = null;
 let DEC_PLANOS = [];
 let playing_interval;
@@ -268,6 +269,9 @@ fetch('decupagem.txt')
       } else if (l.trim() === "--- INFO_HTML" ) {
         m = "infohtml";
         continue;
+      } else if (l.trim() === "--- CONFIG" ) {
+        m = "config";
+        continue;
       }
       if (m === "plano") {
         l = l.trim();
@@ -277,6 +281,8 @@ fetch('decupagem.txt')
             position: Decupagem.parseTimeString(l.match(/\d{2,2}\:\d{2,2}\:\d{2,2}/)[0]),
             metadata:[],
           })
+        } else if (/^\$/.test(l)) {
+          DEC_PLANOS[DEC_PLANOS.length-1][l.split(':')[0].replace('$','').trim()] = l.slice(l.search(':')+1, l.length).trim();
         } else {
           if (/^#/.test(l)) {
             DEC_PLANOS[DEC_PLANOS.length-1].metadata.push([l.replace('#', '')]);
@@ -311,6 +317,12 @@ fetch('decupagem.txt')
           t = true;
         } else {
           c = c + l;
+        }
+      } else if (m === "config") {
+        l = l.trim();
+        if (l === "") continue;
+        if (/^\$/.test(l)) {
+          CONFIG[l.split(':')[0].replace('$','').trim()] = l.slice(l.search(':')+1, l.length).trim();
         }
       }
     }
