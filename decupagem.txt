@@ -154,7 +154,3 @@ Movimento | Zoom-in
 #SONS
 Sons diegéticos | Sons de trânsito (carros, motos)
 Sons não diegéticos | -
-
---- CONFIG
-
-$themeColor: purple
