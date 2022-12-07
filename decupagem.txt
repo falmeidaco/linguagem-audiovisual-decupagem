@@ -24,55 +24,341 @@ Decupagem de: Orgulho e Preconceito (2012)
 
 [[00:00:00]]
 $name: Plano 1
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:22]]
 $name: Plano 2
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:28]]
 $name: Plano 3
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:37]]
 $name: Plano 4
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:45]]
 $name: Plano 5
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:47]]
 $name: Plano 6
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:51]]
 $name: Plano 7
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:54]]
 $name: Plano 8
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:00:58]]
 $name: Plano 9
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:01]]
 $name: Plano 10
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:08]]
 $name: Plano 11
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:11]]
 $name: Plano 12
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:16]]
 $name: Plano 13
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:19]]
 $name: Plano 14
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:24]]
 $name: Plano 15
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:26]]
 $name: Plano 16
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:28]]
 $name: Plano 17
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:01:37]]
 $name: Plano 18
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:02:32]]
 $name: Plano 19
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:02:36]]
 $name: Plano 20
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:02:44]]
 $name: Plano 21
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:02:54]]
 $name: Plano 22
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:03:01]]
 $name: Plano 23
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:03:03]]
 $name: Plano 24
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:03:05]]
 $name: Plano 25
-[[00:03:08]]
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
+[[00:03:09]]
 $name: Plano 26
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -
+
+
 [[00:03:14]]
 $name: Plano 27
