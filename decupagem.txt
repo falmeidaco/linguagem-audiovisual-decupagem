@@ -4,20 +4,20 @@ MdIJukdTWSw
 --- INFO_HTML
 Decupagem de: Orgulho e Preconceito (2012) 
 <p>Por <strong>Antonio Felipe de Almeida Costa</strong></p>
-<p>Página criada para conclusão do trabalho final da disciplina Linguaguem Audio Visual, no curso Sistemas e Mídias Digitais (Universidade Federal do Ceará)</p>
+<p>Página criada para conclusão do trabalho final da disciplina Linguaguem Audiovisual, no curso Sistemas e Mídias Digitais (Universidade Federal do Ceará).</p>
 <h2>Sobre a cena</h2>
 <h3>Descrição</h3>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi quaerat perferendis? Fuga cupiditate, suscipit vero accusantium rem illo non expedita dolores, porro quisquam quos nulla totam debitis, dignissimos quaerat.</p>
 <h2>Sobre o filme</h2>
 <h3>Sinópse</h3>
-<p>Passado em 1973, em plena Guerra Fria, o longa gira em torno de George Smiley (Gary Oldman), um veterano da divisão de elite do serviço secreto inglês conhecida como Circo. Após a morte de seu ex-chefe e de alguns fracassos em missões internacionais, ele é chamado para desvendar um mistério sobre a identidade do agente duplo que, durante anos, trabalhou também para os soviéticos. Todos à sua volta são suspeitos, mas, como bons espiões que são, foram treinados para dissimular e trabalhar em condições de extrema tensão.</p>
+<p>Inglaterra, 1797. As cinco irmãs Bennet - Elizabeth (Keira Knightley), Jane (Rosamund Pike), Lydia (Jena Malone), Mary (Talulah Riley) e Kitty (Carey Mulligan) - foram criadas por uma mãe (Brenda Blethyn) que tinha fixação em lhes encontrar maridos que garantissem seu futuro. Porém Elizabeth deseja ter uma vida mais ampla do que apenas se dedicar ao marido, sendo apoiada pelo pai (Donald Sutherland). Quando o sr. Bingley (Simon Woods), um solteiro rico, passa a morar em uma mansão vizinha, as irmãs logo ficam agitadas. Jane logo parece que conquistará o coração do novo vizinho, enquanto que Elizabeth conhece o bonito e esnobe sr. Darcy (Matthew Macfadyen). Os encontros entre Elizabeth e Darcy passam a ser cada vez mais constantes, apesar deles sempre discutirem.</p>
 <h3>Ficha técnica</h3>
 <p>
-    <strong>Ano de lançamento:</strong> 2012 <br>
-    <strong>Direção:</strong> Tomas Alfredson <br>
-    <strong>Roteiro:</strong> John Le Carré, Peter Straughan <br>
-    <strong>Elenco:</strong> Gary Oldman, Mark Strong, John Hurt <br>
-    <strong>Título original:</strong> Tinker, Tailor, Soldier, Spy
+    <strong>Ano de lançamento:</strong> 2006 <br>
+    <strong>Direção:</strong> Joe Wright <br>
+    <strong>Roteiro:</strong> Jane Austen, Emma Thompson <br>
+    <strong>Elenco:</strong> Keira Knightley, Matthew Macfadyen, Rosamund Pike <br>
+    <strong>Título original:</strong> Pride and Prejudice
 </p>
 
 --- PLANOS
@@ -35,7 +35,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:00:22]]
+[[00:00:22:868461]]
 $name: Plano 2
 
 #Plano
@@ -48,7 +48,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:00:28]]
+[[00:00:28:775611]]
 $name: Plano 3
 
 #Plano
@@ -74,7 +74,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:00:45]]
+[[00:00:44:909878]]
 $name: Plano 5
 
 #Plano
@@ -87,7 +87,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:00:47]]
+[[00:00:47:807362]]
 $name: Plano 6
 
 #Plano
@@ -100,7 +100,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:00:51]]
+[[00:00:51:963938]]
 $name: Plano 7
 
 #Plano
@@ -113,7 +113,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:00:54]]
+[[00:00:54:844951]]
 $name: Plano 8
 
 #Plano
@@ -308,7 +308,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:03:01]]
+[[00:03:01:3700615243333]]
 $name: Plano 23
 
 #Plano
@@ -334,7 +334,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:03:05]]
+[[00:03:04:5]]
 $name: Plano 25
 
 #Plano
@@ -347,7 +347,7 @@ Diegéticos | -
 Não diegéticos | -
 
 
-[[00:03:09]]
+[[00:03:08:5]]
 $name: Plano 26
 
 #Plano
@@ -362,3 +362,12 @@ Não diegéticos | -
 
 [[00:03:14]]
 $name: Plano 27
+
+#Plano
+Tipo de plano | -
+#Câmera
+Ângulo | -
+Movimento | -
+#Sons
+Diegéticos | -
+Não diegéticos | -

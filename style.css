@@ -162,6 +162,7 @@ h6 {
   position: relative;
   margin-bottom: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
 }
 
 .shoot__item::before {
@@ -227,6 +228,7 @@ h6 {
 .shoot__detail-list {
   padding: 5px;
   background-color: #151515;
+  border-radius: 4px;
 }
 
 .shoot__group-title {

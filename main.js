@@ -26,18 +26,25 @@ class Decupagem {
   }
 
   static formatTime(time) {
-    if (time < 60) {
-      return '00:' + ((`${time}`.length > 1) ? time : `0${time}`);
+    const t = Math.round(time);
+    if (t < 60) {
+      return '00:' + ((`${t}`.length > 1) ? t : `0${t}`);
     } else {
-      let min =  Math.round(time/60);
-      let seg = time % 60;
+      let min =  Math.round(t/60);
+      let seg = t % 60;
       return ((`${min}`.length > 1) ? min : `0${min}`) + ":" + ((`${seg}`.length > 1) ? seg : `0${seg}`);
     }
   }
 
   static parseTimeString(time) {
+    console.log(time);
     let s = 0, t = time.split(":");
-    if (t.length === 3) {
+    if (t.length === 4) {
+      s += (parseInt(t[0]) * 60 * 60);
+      s += (parseInt(t[1]) * 60);
+      s += parseInt(t[2]);
+      s = parseFloat(s) + parseFloat(`0.${t[3]}`);
+    } else if (t.length === 3) {
       s += (parseInt(t[0]) * 60 * 60);
       s += (parseInt(t[1]) * 60);
       s += parseInt(t[2]);
@@ -265,6 +272,7 @@ fetch('decupagem.txt')
     let l, i, m, c = '', t = false;
     for (i = 0; i < li.length; i = i +1) {
       l = li[i];
+      if (/^[\-]+$/.test(l.trim())) continue;
       if (l.trim() === "--- INFO" ) {
         m = "info";
         continue;
@@ -284,9 +292,9 @@ fetch('decupagem.txt')
       if (m === "plano") {
         l = l.trim();
         if (l === "") continue;
-        if (/\[{2,2}\d{2,2}\:\d{2,2}\:\d{2,2}\]{2,2}/.test(l)) {
+        if (/\[{2,2}\d{2,2}\:\d{2,2}\:\d{2,2}(\:[\d]+)?\]{2,2}/.test(l)) {
           DEC_PLANOS.push({
-            position: Decupagem.parseTimeString(l.match(/\d{2,2}\:\d{2,2}\:\d{2,2}/)[0]),
+            position: Decupagem.parseTimeString(l.match(/\d{2,2}\:\d{2,2}\:\d{2,2}(\:[\d]+)?/)[0]),
             metadata:[],
           })
         } else if (/^\$/.test(l)) {
