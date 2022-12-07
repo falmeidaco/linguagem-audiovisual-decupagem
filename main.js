@@ -37,7 +37,6 @@ class Decupagem {
   }
 
   static parseTimeString(time) {
-    console.log(time);
     let s = 0, t = time.split(":");
     if (t.length === 4) {
       s += (parseInt(t[0]) * 60 * 60);
@@ -353,7 +352,6 @@ fetch('decupagem.txt')
     } else {
       /* Inicia */
       if (CONFIG.hasOwnProperty('themeColor')) {
-        console.log(CONFIG.themeColor);
         document.querySelector(':root').style.setProperty('--theme-color', CONFIG.themeColor);
       }
       Decupagem.iniciar();
