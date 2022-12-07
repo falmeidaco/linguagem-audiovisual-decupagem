@@ -1,8 +1,8 @@
 --- VIDEO_ID
-b0NL265B11w
+MdIJukdTWSw
 
 --- INFO_HTML
-Decupagem de: O Espião que Sabia Demais (2012) 
+Decupagem de: Orgulho e Preconceito (2012) 
 <p>Por <strong>Antonio Felipe de Almeida Costa</strong></p>
 <p>Página criada para conclusão do trabalho final da disciplina Linguaguem Audio Visual, no curso Sistemas e Mídias Digitais (Universidade Federal do Ceará)</p>
 <h2>Sobre a cena</h2>
@@ -23,134 +23,56 @@ Decupagem de: O Espião que Sabia Demais (2012)
 --- PLANOS
 
 [[00:00:00]]
-
-$color:gray
 $name: Plano 1
-$image_url: https://image_url.source/teste.oi.jpg
-
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-[[00:00:06]]
-
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-[[00:00:19]]
-
-$color:gray
-
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-
-[[00:00:25]]
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-
-[[00:00:31]]
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-
-[[00:00:46]]
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-
-[[00:00:48]]
-
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-[[00:00:57]]
-
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
-
-[[00:01:00]]
-
-#PLANO
-Plano | Grande Plano Geral
-Tipo de plano | Plano de lugar
-
-#CÂMERA
-Câmera | Ângulo baixo
-Movimento | Zoom-in
-
-#SONS
-Sons diegéticos | Sons de trânsito (carros, motos)
-Sons não diegéticos | -
+[[00:00:22]]
+$name: Plano 2
+[[00:00:28]]
+$name: Plano 3
+[[00:00:37]]
+$name: Plano 4
+[[00:00:45]]
+$name: Plano 5
+[[00:00:47]]
+$name: Plano 6
+[[00:00:51]]
+$name: Plano 7
+[[00:00:54]]
+$name: Plano 8
+[[00:00:58]]
+$name: Plano 9
+[[00:01:01]]
+$name: Plano 10
+[[00:01:08]]
+$name: Plano 11
+[[00:01:11]]
+$name: Plano 12
+[[00:01:16]]
+$name: Plano 13
+[[00:01:19]]
+$name: Plano 14
+[[00:01:24]]
+$name: Plano 15
+[[00:01:26]]
+$name: Plano 16
+[[00:01:28]]
+$name: Plano 17
+[[00:01:37]]
+$name: Plano 18
+[[00:02:32]]
+$name: Plano 19
+[[00:02:36]]
+$name: Plano 20
+[[00:02:44]]
+$name: Plano 21
+[[00:02:54]]
+$name: Plano 22
+[[00:03:01]]
+$name: Plano 23
+[[00:03:03]]
+$name: Plano 24
+[[00:03:05]]
+$name: Plano 25
+[[00:03:08]]
+$name: Plano 26
+[[00:03:14]]
+$name: Plano 27

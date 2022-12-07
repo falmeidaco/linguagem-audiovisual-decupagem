@@ -77,7 +77,11 @@ class Decupagem {
     const frame = document.createElement('a');
     frame.href = "#playshoot:" + index;
     frame.classList.add('shoot__frame');
-    frame.style.backgroundImage = `url(images/${index + 1}.png)`;
+    if (data.hasOwnProperty('image')) {
+      frame.style.backgroundImage = `url('${data.image}')`;
+    } else {
+      frame.style.backgroundImage = `url('images/${index + 1}.jpg')`;
+    }
     frame.title = 'Executar plano';
     frame.addEventListener('click', (event) => {
       let shoot_n = parseInt(event.target.parentNode.dataset.shootn) - 1;
@@ -138,7 +142,11 @@ class Decupagem {
       shoot.tabIndex = 0;
     }
     shoot.classList.add('timeline__shoot');
-    shoot.style.backgroundImage = `url("images/${data.index+1}.png")`;
+    if (data.values.hasOwnProperty('image')) {
+      shoot.style.backgroundImage = `url('${data.values.image}')`;
+    } else {
+      shoot.style.backgroundImage = `url('images/${data.index + 1}.jpg')`;
+    }
     shoot.innerText = template_shoot_name.replace('%i', (data.index + 1));
     shoot.title = `Executar Plano ${data.index + 1}`;
     let width;
