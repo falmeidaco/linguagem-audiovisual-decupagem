@@ -9,7 +9,7 @@ Decupagem de: Orgulho e Preconceito (2012)
 <p>Página criada para conclusão do trabalho final da disciplina Linguaguem Audiovisual, no curso Sistemas e Mídias Digitais (Universidade Federal do Ceará).</p>
 <h2>Sobre a cena</h2>
 <h3>Descrição</h3>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi quaerat perferendis? Fuga cupiditate, suscipit vero accusantium rem illo non expedita dolores, porro quisquam quos nulla totam debitis, dignissimos quaerat.</p>
+<p>A cena se passa em uma grande sala de estudos na possível nova residência dos Bingley. Na cena, a personagem Elizabeth, convidada pelos demais personagens a estar naquele lugar e os demais presentes (Mr. Bingle, Mr. Darcy e Caroline), discutem sobre virtudes das mulheres. Elizabeth encontra-se naquela residência para cuidar da irmã Jane, que está doente. O acolhimento dos anfitriões também propicia comentários maldosos para a convidada por parte de um dos personagens. </p>
 <h2>Sobre o filme</h2>
 <h3>Sinópse</h3>
 <p>Inglaterra, 1797. As cinco irmãs Bennet - Elizabeth (Keira Knightley), Jane (Rosamund Pike), Lydia (Jena Malone), Mary (Talulah Riley) e Kitty (Carey Mulligan) - foram criadas por uma mãe (Brenda Blethyn) que tinha fixação em lhes encontrar maridos que garantissem seu futuro. Porém Elizabeth deseja ter uma vida mais ampla do que apenas se dedicar ao marido, sendo apoiada pelo pai (Donald Sutherland). Quando o sr. Bingley (Simon Woods), um solteiro rico, passa a morar em uma mansão vizinha, as irmãs logo ficam agitadas. Jane logo parece que conquistará o coração do novo vizinho, enquanto que Elizabeth conhece o bonito e esnobe sr. Darcy (Matthew Macfadyen). Os encontros entre Elizabeth e Darcy passam a ser cada vez mais constantes, apesar deles sempre discutirem.</p>
@@ -28,12 +28,12 @@ Decupagem de: Orgulho e Preconceito (2012)
 $name: Plano 1
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Geral
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Dolly-in
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena; passos de um dos personagens;
 Não diegéticos | -
 
 ---------------------
@@ -42,12 +42,12 @@ Não diegéticos | -
 $name: Plano 2
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Americano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -56,12 +56,12 @@ Não diegéticos | -
 $name: Plano 3
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Americano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -70,12 +70,12 @@ Não diegéticos | -
 $name: Plano 4
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Médio Fechado
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -84,12 +84,12 @@ Não diegéticos | -
 $name: Plano 5
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Médio Fechado
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -98,12 +98,12 @@ Não diegéticos | -
 $name: Plano 6
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Over the shoulder
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -112,12 +112,12 @@ Não diegéticos | -
 $name: Plano 7
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -126,12 +126,12 @@ Não diegéticos | -
 $name: Plano 8
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Over the shoulder
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -140,12 +140,12 @@ Não diegéticos | -
 $name: Plano 9
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -154,12 +154,12 @@ Não diegéticos | -
 $name: Plano 10
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Americano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático seguido de movimento leve Tilt (para cima)
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -168,12 +168,12 @@ Não diegéticos | -
 $name: Plano 11
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Over the shoulder
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena; passos de um dos personagens;
 Não diegéticos | -
 
 ---------------------
@@ -182,12 +182,12 @@ Não diegéticos | -
 $name: Plano 12
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Tilt (para cima)
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -196,12 +196,12 @@ Não diegéticos | -
 $name: Plano 13
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Médio Fechado
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Over the shoulder
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -210,12 +210,12 @@ Não diegéticos | -
 $name: Plano 14
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -224,12 +224,12 @@ Não diegéticos | -
 $name: Plano 15
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Médio Fechado
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena (risada);
 Não diegéticos | -
 
 ---------------------
@@ -238,12 +238,12 @@ Não diegéticos | -
 $name: Plano 16
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Médio Fechado
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Over the shoulder
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -252,12 +252,12 @@ Não diegéticos | -
 $name: Plano 17
 
 #Plano
-Tipo de plano | -
+Tipo | Close
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático seguido de movimento leve Tilt
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -266,12 +266,12 @@ Não diegéticos | -
 $name: Plano 18
 
 #Plano
-Tipo de plano | -
+Tipo | Plano Sequência
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | PAN; Sequências de Tilt (alternando entre foco nos personagens que estão em movimento e em pé e o personagem parado e sentado na cena)
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena; Passos dos personagens; 
 Não diegéticos | -
 
 ---------------------
@@ -280,12 +280,12 @@ Não diegéticos | -
 $name: Plano 19
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -294,12 +294,12 @@ Não diegéticos | -
 $name: Plano 20
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Low-angle; Over the shoulder;
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -308,12 +308,12 @@ Não diegéticos | -
 $name: Plano 21
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | High-angle; Over the shoulder;
+Movimento | Dolly-in
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -322,12 +322,12 @@ Não diegéticos | -
 $name: Plano 22
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Low-angle; Over the shoulder;
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -336,12 +336,12 @@ Não diegéticos | -
 $name: Plano 23
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Low-angle; Over the shoulder;
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -350,12 +350,12 @@ Não diegéticos | -
 $name: Plano 24
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Low-angle; Over the shoulder;
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -364,12 +364,12 @@ Não diegéticos | -
 $name: Plano 25
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | PAN
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena (risada);
 Não diegéticos | -
 
 ---------------------
@@ -378,12 +378,12 @@ Não diegéticos | -
 $name: Plano 26
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Low-angle; Over the shoulder;
+Movimento | Quase estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
 
 ---------------------
@@ -392,10 +392,10 @@ Não diegéticos | -
 $name: Plano 27
 
 #Plano
-Tipo de plano | -
+Tipo | Primeiro Plano
 #Câmera
-Ângulo | -
-Movimento | -
+Ângulo | Normal
+Movimento | Estático
 #Sons
-Diegéticos | -
+Diegéticos | Falas dos personagens da cena;
 Não diegéticos | -
