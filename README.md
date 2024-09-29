@@ -8,3 +8,5 @@ A ferramenta pode ser utilizada para decupagem de qualquer outro vídeo disponí
 
 - Faça o clone do repositório
 - Edite o arquivo decupagem.txt
+
+[Clique aqui para ver a ferramenta em ação](https://falmeidaco.github.io/linguagem-audiovisual-decupagem/)
